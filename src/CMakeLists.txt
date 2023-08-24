@@ -18,7 +18,7 @@ if (WITH_VCPKG_TOOLCHAIN)
 else ()
 	# Try to find the package if workflow is not installed, otherwise proceed with find_package()
 	if (NOT WORKFLOW_INSTALLED)
-		find_package(Workflow REQUIRED CONFIG HINTS ../workflow)
+		find_package(Workflow REQUIRED CONFIG HINTS ${CMAKE_CURRENT_SOURCE_DIR}/../workflow)
 	endif ()
 endif()
 
